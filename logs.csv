@@ -198,14 +198,4 @@ Timestamp,IP Address,Username,Event Type,Status,Protocol,Destination,Port
 2026-07-04 17:28:00,185.220.101.7,unknown,Port Scan,Blocked,TCP,FILE-SRV-01,1996
 2026-07-04 18:11:00,192.168.1.10,svance,Web Access,Success,HTTP,APP-SRV-03,80
 2026-07-04 18:46:00,192.168.1.26,amiller,ICMP Ping,Success,ICMP,DC-01,0
-2026-07-04 19:08:00,192.168.1.16,rjones,DNS Query,Success,DNS,DB-SRV-02,53
-2026-07-07 11:20:00,100.100.100.100,scanner,Connection,Success,20
-2026-07-07 11:20:01,100.100.100.100,scanner,Connection,Success,21
-2026-07-07 11:20:02,100.100.100.100,scanner,Connection,Success,22
-2026-07-07 11:20:03,100.100.100.100,scanner,Connection,Success,23
-2026-07-07 11:20:04,100.100.100.100,scanner,Connection,Success,25
-2026-07-07 11:20:05,100.100.100.100,scanner,Connection,Success,53
-2026-07-07 11:20:06,100.100.100.100,scanner,Connection,Success,80
-2026-07-07 11:20:07,100.100.100.100,scanner,Connection,Success,110
-2026-07-07 11:20:08,100.100.100.100,scanner,Connection,Success,443
-2026-07-07 11:10:00,172.16.20.10,administrator,Login Failed,Failed,22
+2026-07-07 15:30:00,192.168.1.100,deepak,Login Failed,Failed,22
