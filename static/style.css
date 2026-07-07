@@ -1,0 +1,234 @@
+/* ==========================================================
+   style.css
+   Dark SOC Theme for the Log Analyzer Dashboard
+   Colors: dark background + blue accents
+   ========================================================== */
+
+:root {
+    --soc-bg: #0d1117;
+    --soc-panel: #161b22;
+    --soc-panel-light: #1c2531;
+    --soc-border: #2a3441;
+    --soc-blue: #3b82f6;
+    --soc-blue-light: #60a5fa;
+    --soc-text: #e6edf3;
+    --soc-text-muted: #8b949e;
+    --soc-red: #f85149;
+    --soc-orange: #ff9f43;
+    --soc-yellow: #f0c419;
+    --soc-green: #3fb950;
+}
+
+body {
+    background-color: var(--soc-bg);
+    color: var(--soc-text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------------- Top Navigation Bar ---------------- */
+.soc-navbar {
+    background-color: var(--soc-panel);
+    border-bottom: 1px solid var(--soc-border);
+    padding: 0.8rem 1.5rem;
+}
+
+.soc-navbar .navbar-brand {
+    color: var(--soc-blue-light);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.soc-navbar .navbar-brand i {
+    margin-right: 8px;
+}
+
+/* ---------------- Sidebar ---------------- */
+.soc-sidebar {
+    background-color: var(--soc-panel);
+    min-height: 100vh;
+    border-right: 1px solid var(--soc-border);
+    padding-top: 1.5rem;
+}
+
+.soc-sidebar .nav-link {
+    color: var(--soc-text-muted);
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    margin: 0.2rem 0.8rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.soc-sidebar .nav-link i {
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+
+.soc-sidebar .nav-link:hover {
+    background-color: var(--soc-panel-light);
+    color: var(--soc-blue-light);
+}
+
+.soc-sidebar .nav-link.active {
+    background-color: var(--soc-blue);
+    color: #ffffff;
+}
+
+/* ---------------- Main Content Area ---------------- */
+.soc-main {
+    padding: 1.8rem;
+}
+
+.soc-page-title {
+    color: var(--soc-text);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.soc-page-title i {
+    color: var(--soc-blue-light);
+    margin-right: 10px;
+}
+
+/* ---------------- Cards ---------------- */
+.soc-card {
+    background-color: var(--soc-panel);
+    border: 1px solid var(--soc-border);
+    border-radius: 14px;
+    padding: 1.2rem;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+    height: 100%;
+}
+
+.soc-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--soc-blue);
+}
+
+.soc-card .soc-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.soc-card .soc-card-label {
+    color: var(--soc-text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.soc-card .soc-card-icon {
+    font-size: 1.8rem;
+    opacity: 0.8;
+}
+
+/* Card accent colors */
+.soc-card.blue .soc-card-value { color: var(--soc-blue-light); }
+.soc-card.red .soc-card-value { color: var(--soc-red); }
+.soc-card.orange .soc-card-value { color: var(--soc-orange); }
+.soc-card.yellow .soc-card-value { color: var(--soc-yellow); }
+.soc-card.green .soc-card-value { color: var(--soc-green); }
+
+/* Makes a card clickable while keeping its normal look (no underline/blue link text) */
+.soc-card-link {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+/* ---------------- Tables ---------------- */
+.soc-table-wrapper {
+    background-color: var(--soc-panel);
+    border: 1px solid var(--soc-border);
+    border-radius: 14px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.table-soc {
+    color: var(--soc-text);
+    margin-bottom: 0;
+}
+
+.table-soc thead th {
+    color: var(--soc-text-muted);
+    border-bottom: 1px solid var(--soc-border);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+}
+
+.table-soc tbody td {
+    border-bottom: 1px solid var(--soc-border);
+    vertical-align: middle;
+}
+
+.table-soc tbody tr:hover {
+    background-color: var(--soc-panel-light);
+}
+
+/* ---------------- Badges ---------------- */
+.badge-critical { background-color: var(--soc-red); color: #fff; }
+.badge-high { background-color: var(--soc-orange); color: #1a1a1a; }
+.badge-medium { background-color: var(--soc-yellow); color: #1a1a1a; }
+.badge-low { background-color: var(--soc-green); color: #1a1a1a; }
+
+/* ---------------- Buttons ---------------- */
+.btn-soc-primary {
+    background-color: var(--soc-blue);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-soc-primary:hover {
+    background-color: var(--soc-blue-light);
+    color: #fff;
+}
+
+/* ---------------- Report Box ---------------- */
+.soc-report-box {
+    background-color: #0a0e14;
+    border: 1px solid var(--soc-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    white-space: pre-wrap;
+    font-family: "Consolas", monospace;
+    font-size: 0.9rem;
+    color: var(--soc-text);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* ---------------- Section Heading ---------------- */
+.soc-section-heading {
+    color: var(--soc-text-muted);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+/* ---------------- Scrollbar ---------------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--soc-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--soc-border);
+    border-radius: 4px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+    .soc-sidebar {
+        min-height: auto;
+    }
+}

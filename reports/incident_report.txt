@@ -1,0 +1,7 @@
+============================================================
+SOC INCIDENT REPORT
+============================================================
+No report has been generated yet.
+Run the application and click "Generate Report" to create
+a fresh incident report based on the current logs.
+============================================================

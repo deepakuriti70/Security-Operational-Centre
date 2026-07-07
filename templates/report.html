@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOC Dashboard - Incident Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar soc-navbar">
+        <span class="navbar-brand">
+            <i class="bi bi-shield-lock-fill"></i>SOC Log Analyzer
+        </span>
+        <span class="text-muted small">Tier-1 Analyst View</span>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <div class="col-md-2 soc-sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">
+                            <i class="bi bi-speedometer2"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('alerts_page') }}">
+                            <i class="bi bi-exclamation-triangle-fill"></i>Alerts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logs_page') }}">
+                            <i class="bi bi-journal-text"></i>Logs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('report_page') }}">
+                            <i class="bi bi-file-earmark-text-fill"></i>Incident Report
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('generate_report_route') }}">
+                            <i class="bi bi-arrow-repeat"></i>Generate Report
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10 soc-main">
+                <h3 class="soc-page-title"><i class="bi bi-file-earmark-text-fill"></i>Incident Report</h3>
+                <p class="text-muted">
+                    This report is generated from reports/incident_report.txt.
+                    Click "Generate Report" in the sidebar to refresh it with the latest alerts.
+                </p>
+
+                <div class="soc-report-box">{{ report_text }}</div>
+
+                <a href="{{ url_for('generate_report_route') }}" class="btn btn-soc-primary mt-3">
+                    <i class="bi bi-arrow-repeat"></i> Regenerate Report
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
